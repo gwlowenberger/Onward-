@@ -1,0 +1,18 @@
+All blurbs follow a format of 16 columns by 6 rows. The scanner reads the first 16 eligibile
+characters in each of the first 6 rows. Spaces are indicated by (_) underscores.
+
+A blurb might look like this:
+
+ -------------- START SAMPLE
+A_CAT_IN_THE_HAT
+WAS_A_MOVIE_THAT
+TAUGHT_ME_THAT
+CATS_ARE_EVIL
+WITCHES_WHO_EAT
+CHILDREN
+123456789abcdefg
+ -------------- END SAMPLE
+
+The letters and numbers serve as character markers, so that the sample does not exeed the max length.
+Only capital letters and underscores are valid characters. All others are ignored.
+Empty lines are counted. Lines with only invalid characters are counted as empty lines.

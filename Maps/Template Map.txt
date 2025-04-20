@@ -1,0 +1,41 @@
+The first number is the size of the grid, and all following information is with players, obstacles, or enemies
+
+Player information is as follows:
+    a character to identify the type of actor (p for players, e for enemies)
+    one number for the index number of that type in its designated array
+    one number for the x position
+    one number for the y position
+
+All other characters are irrelevant and exist for purely organizational purposes. A sample might look like this:
+
+ -------------- START SAMPLE
+Size: 12
+
+p0 , (0 , 0) 
+e10, (1 , 0)
+o0 , (1 ,10)
+e9 , (10, 4)
+p30, (10, 5)
+e2 , (11, 6)
+ -------------- END SAMPLE
+
+Important parts:
+
+p0 , (1 , 2)        p0 , (1 , 2)        p0 , (1 , 2)        p0 , (1 , 2)
+^                    ^                        ^                       ^
+p is the type.       0 is the index           1 is the x              2 is the y
+p codes for player.  number of the            coordinate.             coordinate.
+The file reader      enemy.
+checks the start of
+each line for an
+identifier like
+this.
+
+Important Notes:
+
+    The code treats consecutive numeric characters (i.e. 123) as the number one-hundred and twenty-three. However, if
+those numbers are seperated by a space or another character, (i.e. 1 2 3 or 1,2,3 or 1a2a3a) they would be treated
+as seperate numbers.
+
+    It is good practice to organize elements by position to avoid conflicts.
+Any elements with coordinates outside of the grid (>= size) will be deleted.
